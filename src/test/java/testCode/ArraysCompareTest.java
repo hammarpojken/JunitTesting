@@ -24,5 +24,16 @@ public class ArraysCompareTest {
 		int[] numbers = null;
 		Arrays.sort(numbers);
 	}
+	
+	@Test(timeout = 100)
+	public void testSort_Preformance() {
+		int [] arr = {12,23,4,56,23,100000,34444};
+		for(int i = 0; i <1000000; i++) {
+			
+			arr[0] = i;
+			Arrays.sort(arr);
+		}
+		
+	}
 
 }
